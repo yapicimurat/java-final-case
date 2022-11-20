@@ -53,6 +53,7 @@ public class App {
                     break;
 
                 case 4:
+                    System.out.print("Marka adı giriniz:");
                     String brandName = scanner.next();
                     brandService.create(new Brand(brandName));
 
@@ -70,6 +71,7 @@ public class App {
                     break;
 
                 case 6:
+                    System.out.print("Ürün grubu adı giriniz:");
                     String productGroupName = scanner.next();
                     productGroupService.create(new ProductGroup(productGroupName));
                     System.out.println("Yeni bir ürün grubu oluşturuldu.");
