@@ -4,20 +4,14 @@ import model.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class ProductRepository {
 
     private List<Product> products = new ArrayList<>();
-    private List<ProductGroup> productGroups;
-
-    private BrandRepository brandRepository = Config.getBrandRepositoryInstance();
 
     public ProductRepository(){
-        List<Brand> brands = brandRepository.getAll();
-
-        //Creating Product Groups
-        productGroups = Config.getProductGroupRepositoryInstance().productGroups;
+        List<Brand> brands = Config.getBrandRepositoryInstance().getAll();
+        List<ProductGroup> productGroups = Config.getProductGroupRepositoryInstance().getProductGroups();
 
         //CREATING PRODUCT
         create(new MobilePhone(productGroups.get(0),
@@ -25,7 +19,7 @@ public class ProductRepository {
                 5.0,
                 50,
                 "Samsung J4 Plus",
-                brands.get(0),
+                brands.get(7),
                 16,
                 5.1,
                 4000,
@@ -37,14 +31,14 @@ public class ProductRepository {
                 0.0,
                 10,
                 "Iphone 14 Pro Max",
-                brands.get(2),
+                brands.get(0),
                 1000,
                 6.69,
                 4323,
                 6,
                 Color.GOLD.getName()));
 
-        create(new Notebook(productGroups.get(1),
+        create(new Notebook(productGroups.get(0),
                 16000.0,
                 10.0,
                 28,

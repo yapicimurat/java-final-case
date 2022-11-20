@@ -2,6 +2,7 @@ package repository;
 
 
 public final class Config {
+
     //LAZY LOADING SINGLETON PATTERN
     private static ProductRepository productRepository;
     private static ProductGroupRepository productGroupRepository;

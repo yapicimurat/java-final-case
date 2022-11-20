@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ProductGroupRepository {
 
-    public List<ProductGroup> productGroups = new ArrayList<>();
+    private List<ProductGroup> productGroups = new ArrayList<>();
 
     public ProductGroupRepository(){
         //Creating product groups

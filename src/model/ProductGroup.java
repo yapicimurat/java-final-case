@@ -26,4 +26,10 @@ public class ProductGroup {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "[ÜRÜN GRUBU] - " +
+                " ID = " + id +
+                " İsim = '" + name + '\'';
+    }
 }

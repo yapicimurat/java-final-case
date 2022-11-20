@@ -29,7 +29,7 @@ public class ProductGroupService {
     }
 
     private ProductGroup findProductGroupById(UUID id){
-        return productGroupRepository.productGroups
+        return productGroupRepository.getProductGroups()
                 .stream()
                 .filter(productGroup -> productGroup.getId().equals(id))
                 .findFirst()
